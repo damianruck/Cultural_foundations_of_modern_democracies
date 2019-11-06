@@ -5,13 +5,13 @@ Data code and instructions to reproduce the findings for the paper "The cultural
 If you make use of any of this code or data please cite: <insert citation>
 
 ## directories
-data - datasets needed to construct cultural value units 
-
 R - R scripts
 
 python - Python scripts
 
 timeSeriesRegression - time series for each variable in .csv format (used for regressions)
+
+data - additional datasets needed to run results
 
 
 ## Get raw data
@@ -19,18 +19,6 @@ European Values Survey https://www.gesis.org/en/services/data-analysis/internati
 
 World Values Survey http://www.worldvaluessurvey.org/WVSContents.jsp
 
-## Derive Cosmopolitanism from raw WEVS data 
-
-We provide a file containing the combined World and European Values Survey data called "WEVS"; it contains the 68 common 
-cultural value questions sicen 1990, demographic information and the variables are standardized with missing values mean imputed.  Run "ExtractRandC.R" to use weighted principal component analysis to extract Openness to Diversity (C) from WEVS data.
-
-## Derive three Civic confidence variables from WEVS data
-
-Using the file "WEVS_civic", use the script "civicPCA.R" to construct three civic confidence variables: "Institutional Confidence", "Support for Democracy" and "Generalized Trust"
-
-## Show that birth decade differences are independent of time period using model comparison
-
-Run "splitSampesByBirthdecadeAndTimeperiod.py" to split the representative samples for each nation by birth decade and time period for Openness to Diversity and the three Civic Confidence variables. Then "createDataframeForkfold.py" converts all the nation matrices into a dataframe to be used in the model comparison. Then run "kfoldModelComparison.R" which compares hierarchical linear regressions of increasing complexity, testing whether birth decade differences are independent of time period.
 
 ## run hierachical time-lagged regression (figure 1)
 
