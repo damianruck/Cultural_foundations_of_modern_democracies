@@ -4,7 +4,7 @@ Data code and instructions to reproduce the findings for the paper "The cultural
 
 If you make use of any of this code or data please cite: *Ruck, D.J., Matthews, L.J., Kyritsis, T. et al. The cultural foundations of modern democracies. Nat Hum Behav (2019).*
 
-## directories
+## Directories
 time_series_normalized - time series for each variable in .csv format (used for regressions)
 
 random_effects - folder contains langauge categories for the multi-level regression
@@ -14,7 +14,7 @@ European Values Survey https://www.gesis.org/en/services/data-analysis/internati
 
 World Values Survey http://www.worldvaluessurvey.org/WVSContents.jsp
 
-## run hierachical time-lagged regression
+## Run hierachical time-lagged regression
 
 Running runRStan.R fits the multilevel time-lagged linear regression to the time series in 'time_series_normalized'.
 
@@ -22,6 +22,6 @@ Compare national time series for Democracy (D), Openness to Diversity  (C) Insti
 
 Changing the "adultAge" parameter runs regressions assuming an adult age of either 0-10, 10-20 or 20-30 years.  
 
-## plot figures 1 and 2 (regression results) 
+## Plot figures 1 and 2 (regression results) 
 
 Run "plot.py" to recreate figure 1 and figure 2.  
